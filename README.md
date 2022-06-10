@@ -1,3 +1,7 @@
+PRNDcompany Fork Version
+
+---
+
 <p align="left"> <img width="675" src="https://raw.githubusercontent.com/willmcpo/body-scroll-lock/master/images/logo.png" alt="Body scroll lock...just works with everything ;-)" /> </p>
 
 ## Why BSL?
@@ -165,29 +169,24 @@ class SomeOtherComponent extends React.Component {
 }
 ```
 
-
 ##### Angular
 
 ```javascript
-import { Component, ElementRef, OnDestroy, ViewChild } from "@angular/core";
+import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
 // 1. Import the functions
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 @Component({
-  selector: "app-scroll-block",
-  templateUrl: "./scroll-block.component.html",
-  styleUrls: ["./scroll-block.component.css"]
+  selector: 'app-scroll-block',
+  templateUrl: './scroll-block.component.html',
+  styleUrls: ['./scroll-block.component.css'],
 })
 export class SomeComponent implements OnDestroy {
   // 2. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav).
   // Specifically, the target element is the one we would like to allow scroll on (NOT a parent of that element).
   // This is also the element to apply the CSS '-webkit-overflow-scrolling: touch;' if desired.
-  @ViewChild("scrollTarget") scrollTarget: ElementRef;
+  @ViewChild('scrollTarget') scrollTarget: ElementRef;
 
   showTargetElement() {
     // ... some logic to show target element
@@ -195,7 +194,7 @@ export class SomeComponent implements OnDestroy {
     // 3. Disable body scroll
     disableBodyScroll(this.scrollTarget.nativeElement);
   }
-  
+
   hideTargetElement() {
     // ... some logic to hide target element
 
@@ -211,7 +210,6 @@ export class SomeComponent implements OnDestroy {
     clearAllBodyScrollLocks();
   }
 }
-
 ```
 
 ##### Vanilla JS
@@ -247,8 +245,8 @@ bodyScrollLock.clearAllBodyScrollLocks();
 
 Check out the demo, powered by Vercel.
 
-* https://bodyscrolllock.vercel.app for a basic example 
-* https://bodyscrolllock-modal.vercel.app for an example with a modal.
+- https://bodyscrolllock.vercel.app for a basic example
+- https://bodyscrolllock-modal.vercel.app for an example with a modal.
 
 ## Functions
 
